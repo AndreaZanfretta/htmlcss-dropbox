@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    min-width: 1200px;
+}
+/* generali */
+.debug{
+    border: 1px solid black;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 5px;
+}
+.btn{
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.blue{
+    background-color: blue;
+    color: white;
+}
+/* header */
+nav{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+nav .logo{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 25px;
+}
+nav ul li a{
+    color: black;
+}
+.jumbotron{
+    width: 100%;
+    padding-top: 180px;
+    background-color: #B4D0E7;
+}
+.jumbo{
+    width: 80%;
+    margin: 0 auto;
+}
+.jumbo h1{
+    font-size: 70px;
+    font-weight:bolder ;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+.jumbo-left a{
+    font-size: 20px;
+}
+.jumbo-left p{
+    max-width: 70%;
+    font-size: 20px;
+    padding-top: 50px;
+}
+.jumbo-left span{
+    display: inline-block;
+    max-width: 70%;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.jumbo-left{
+    width: 30%;
+}
+.jumbo-right{
+    width: 70%;
+}
+.jumbo-left .btn{
+    margin-top: 20px;
+    padding-top: 0;
+}
+.jumbo-right img{
+    height: 400px;
+    margin-bottom: -30px;
+    object-fit: contain;
+}
+/* main */
+.panel-header{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 180px;
+}
+.panel-header h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.blue-circle{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.blue-circle::before{
+    content: "aaa";
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border: 1px solid blue;
+    border-radius: 50%;
+}
