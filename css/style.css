@@ -146,8 +146,9 @@ nav ul li a{
 }
 /* box piani */
 .plans-box{
-    width: 30%;
-    margin-right: 40px;
+    width: calc(33% - 10px);
+    margin: 0 auto;
+    margin-right: 14px;
 }
 .plans-head{
     text-align: center;
@@ -163,7 +164,7 @@ nav ul li a{
 .team::before{
     font-family: "Font Awesome 6 Free";
     font-weight: 400; 
-    content: "\f007";
+    content: "\f1ad";
 }
 .plans-body{
     padding: 30px 20px;
@@ -206,4 +207,31 @@ nav ul li a{
 .plans-body ul i{
     color: blue;
     margin-right: 5px;
+}
+.team-box{
+    margin-top: 60px;
+    position: relative;
+}
+.plans-foot{
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+.team-box h3{
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+}
+.team-box .bold{
+    padding-bottom: 20px;
+}
+.team-box p{
+    padding-bottom: 30px;
+}
+.team-box .btn{
+    position: absolute;
+    top: 65px;
+    right: 40px;
 }
