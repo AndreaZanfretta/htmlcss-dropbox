@@ -378,3 +378,43 @@ nav ul li a{
     -webkit-filter: invert(1);
     filter: invert(1);
 }
+/* fifth panel */
+.fifth-panel h4{
+    color: #61082B;
+    font-size: 45px;
+    padding-right: 60%;
+}
+.fifth-panel .panel-container{
+    position: relative;
+    padding-bottom: 180px;
+}
+.fifth-panel .btn-white{
+    position: absolute;
+    top: 180px;
+    right: 50px;
+}
+/* sixth panel */
+.sixth-panel{
+    padding-bottom: 180px;
+}
+.sixth-panel h4{
+    font-size: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
+}
+.sixth-panel span{
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+}
+.sixth-panel span::after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    margin-left: 270px; 
+    content: "\f150";
+}
