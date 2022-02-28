@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     min-width: 1200px;
 }
@@ -30,15 +32,15 @@ a{
 }
 .btn{
     margin-top: 30px;
-    margin-right: 20px;
 }
 .blue{
-    background-color: blue;
+    background-color: #0061FF;
     color: white;
 }
 /* color background */
 .green{
-    background-color: #D0E9CD;
+    background-color: #A2D39B;
+    border: 10px solid #D0E9CD;
 }
 .violet{
     background-color: #61082B;
@@ -68,18 +70,53 @@ nav{
     width: 100%;
     background-color: white;
     z-index: 1000;
+    min-width: 1200px;
 }
 nav .logo{
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 30px;
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 70px;
     padding: 0 25px;
+    position: relative;
 }
 nav ul li a{
     color: black;
+}
+nav li:hover{
+    border-bottom: 3px solid grey;
+    border-radius: 3px;
+}
+.sub-menu{
+    background-color: white;
+    list-style-type: none;
+    position: absolute;
+    line-height: 0;
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+nav ul li:hover .sub-menu{
+    display: block;
+    border: 0;
+}
+nav ul li:hover .sub-menu li{
+    border: 0;
+}
+.sub-menu li{
+    width: 100%;
+    line-height: 30px;
+    padding: 10px 0px;}
+.sub-menu li a{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.sub-menu li:hover a{
+    background-color: grey;
 }
 .jumbotron{
     width: 100%;
@@ -100,13 +137,15 @@ nav ul li a{
     font-size: 20px;
 }
 .jumbo-left p{
-    max-width: 70%;
     font-size: 20px;
     padding-top: 50px;
 }
+.jumbo-left .btn{
+    text-align: center;
+}
 .jumbo-left span{
     display: inline-block;
-    max-width: 70%;
+padding-left: 60px;
     font-size: 16px;
     padding-top: 10px;
 }
@@ -127,8 +166,11 @@ nav ul li a{
     object-fit: contain;
 }
 .fa-arrow-down{
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 40px;
+}
+#freccia a{
+    color: black;
 }
 
 /* main */
@@ -136,6 +178,7 @@ nav ul li a{
     width: 70%;
     margin: 0 auto;
     padding-top: 180px;
+    max-width: 1200px;
 }
 .panel-header h2{
     font-size: 40px;
@@ -209,6 +252,10 @@ nav ul li a{
     padding-bottom: 15px;
     font-weight: bolder;
 }
+.plans-body p a{
+    color: #0061FF;
+    text-decoration: underline;
+}
 .bold{
     font-weight: bolder;
     padding-bottom: 5px;
@@ -238,10 +285,17 @@ nav ul li a{
 .plans-body ul i{
     color: blue;
     margin-right: 5px;
+    margin-left: -19px;
+}
+.plans-body ul li{
+    padding-left: 20px;
 }
 .team-box{
     margin-top: 60px;
     position: relative;
+}
+.team-box h3, p{
+    padding-left: 50px;
 }
 .plans-foot{
     text-align: center;
@@ -286,8 +340,9 @@ nav ul li a{
 .right p{
     font-size: 19px;
     font-weight: bold;
-    padding-right: 130px;
+    padding-right: 30px;
     padding-bottom: 20px;
+    padding-left: 0;
     line-height: 30px;
 }
 .btn-white{
@@ -314,7 +369,7 @@ nav ul li a{
     width: 100%;
 }
 .grid-box h4{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bolder;
     padding-bottom: 30px;
 }
@@ -323,6 +378,7 @@ nav ul li a{
     font-weight: bolder;
     color: black;
     padding-bottom: 30px;
+    padding-left: 0;
 }
 .grid-box p span{
     text-decoration: underline;
@@ -331,7 +387,7 @@ nav ul li a{
 .fourth-panel h3{
     font-size: 39px;
     font-weight: bolder;
-    padding-right: 60%;
+    padding-right: 55%;
     padding-bottom: 30px;
 }
 .fourth-panel a{
@@ -340,6 +396,7 @@ nav ul li a{
     text-decoration: underline;
 }
 .fourth-panel .square-container{
+    height: 30vw;
 }
 .fourth-panel .side-square{
     width: 30vw;
@@ -348,7 +405,7 @@ nav ul li a{
     background-color: #F5F5F5;
     width: calc(100% - 60vw);
     padding: 60px 40px;
-    min-height: 525px;
+    max-height: 30vw;
     overflow-y: auto;
 }
 .fourth-panel .small-square{
@@ -363,7 +420,7 @@ nav ul li a{
 .middle-square p{
     font-size: 20px;
     color: black;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 .middle-square p:last-child{
     font-size: 20px;
@@ -371,12 +428,14 @@ nav ul li a{
 }
 .small-square img{
     position:absolute;
+    width: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 70px 70px;
     -webkit-filter: invert(1);
     filter: invert(1);
+    overflow: hidden;
+    
 }
 /* fifth panel */
 .fifth-panel h4{
@@ -386,7 +445,7 @@ nav ul li a{
 }
 .fifth-panel .panel-container{
     position: relative;
-    padding-bottom: 180px;
+    padding: 100px 0;
 }
 .fifth-panel .btn-white{
     position: absolute;
@@ -396,6 +455,10 @@ nav ul li a{
 /* sixth panel */
 .sixth-panel{
     padding-bottom: 180px;
+    min-width: 1500px;
+}
+.dropdown{
+    border-bottom: 1px solid gray;
 }
 .sixth-panel h4{
     font-size: 40px;
@@ -404,19 +467,30 @@ nav ul li a{
 }
 .sixth-panel span{
     display: inline-block;
-    width: 100%;
+    width: 90%;
     font-weight: bold;
     font-size: 20px;
     padding-top: 30px;
-    padding-right: 100px;
     padding-bottom: 30px;
-    border-bottom: 1px solid gray;
 }
-.sixth-panel span::after{
-    font-family: "Font Awesome 6 Free";
-    font-weight: 400;
-    margin-left: 270px; 
-    content: "\f150";
+.sixth-panel i.right{
+    display: inline-block;
+    width: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.sixth-panel .dropdown p{
+    padding-left: 0;
+    text-align: left;
+    padding-bottom: 50px;
+    padding-top: 90px;
+    display: none;
+}
+.dropdown i.right:hover + p{
+    display: block;
 }
 /* footer */
 .inline{
